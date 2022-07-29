@@ -3,7 +3,7 @@ import highlight from 'remark-highlight.js';
 import { unified } from 'unified';
 import markdown from 'remark-parse';
 
-function BlogPostPage({ blog }) {
+function BlogPostPage({ blog }: any) {
 	return (
 		<div>
 			<h1>{blog.title}</h1>
@@ -13,7 +13,7 @@ function BlogPostPage({ blog }) {
 }
 
 // pass props to BlogPostPage component
-export async function getStaticProps(context) {
+export async function getStaticProps(context: any) {
 	const fs = require('fs');
 	const matter = require('gray-matter');
 
@@ -44,16 +44,16 @@ export async function getStaticProps(context) {
 }
 
 // generate HTML paths at build time
-export async function getStaticPaths(context) {
+export async function getStaticPaths(context: any) {
 	const fs = require('fs');
 
 	const path = `${process.cwd()}/contents`;
 	const files = fs.readdirSync(path, 'utf-8');
 
-	const markdownFileNames = files.filter((fn) => fn.endsWith('.md')).map((fn) => fn.replace('.md', ''));
+	const markdownFileNames = files.filter((fn: any) => fn.endsWith('.md')).map((fn: any) => fn.replace('.md', ''));
 
 	return {
-		paths: markdownFileNames.map((fileName) => {
+		paths: markdownFileNames.map((fileName: any) => {
 			return {
 				params: {
 					slug: fileName
