@@ -1,5 +1,5 @@
 ---
-title: My first blog
+title: Boas Práticas no desenvolvimento de software
 slug: hello-world
 date: '31-05-2020'
 ---
