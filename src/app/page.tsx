@@ -36,7 +36,7 @@ export default function Home() {
 							</div>
 						</div>
 						<div className='md:w-1/2 flex justify-center'>
-							<div className='relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-blue-600 dark:border-blue-400'>
+							<div className='relative w-64 h-64 rounded-full overflow-hidden border-4 border-blue-600 dark:border-blue-400'>
 								<Image src='/eu_perfil.jpg' alt='Davi S. Bento' fill className='object-cover' priority />
 							</div>
 						</div>
